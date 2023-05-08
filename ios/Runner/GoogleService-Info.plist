@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>703576979543-6b6m278bpptr7cj72ao8dgkupq2q013p.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.703576979543-6b6m278bpptr7cj72ao8dgkupq2q013p</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>703576979543-s0tilsp6koakp4a9gu9vo1vamn7p4le6.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCO47JOAG3uOc_SEe1T_llZLpnT5SByVbI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>703576979543</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.hostelComplaintsAdmin</string>
+	<key>PROJECT_ID</key>
+	<string>hostel-complaints-a9745</string>
+	<key>STORAGE_BUCKET</key>
+	<string>hostel-complaints-a9745.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:703576979543:ios:7447e9cd6f02f2f9778b12</string>
+</dict>
+</plist>

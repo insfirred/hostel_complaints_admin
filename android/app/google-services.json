@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "703576979543",
+    "project_id": "hostel-complaints-a9745",
+    "storage_bucket": "hostel-complaints-a9745.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703576979543:android:189afc3800767619778b12",
+        "android_client_info": {
+          "package_name": "com.example.hostel_complaints_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "703576979543-tojkcpj7u20rlvnigekpnmg6b027bhvl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZavIXN9j3AR5pBmlFcBnuv5RnlVpGbno"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "703576979543-tojkcpj7u20rlvnigekpnmg6b027bhvl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "703576979543-hmdqd4s2ppamfi7ke6t4urb56nrmvg37.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.hostelComplaints"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703576979543:android:7a6d3d0dc316be2a778b12",
+        "android_client_info": {
+          "package_name": "com.kalash.complaints"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "703576979543-s0tilsp6koakp4a9gu9vo1vamn7p4le6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kalash.complaints",
+            "certificate_hash": "1ea7d6c10688c8a3987c4d1fd603b3da89df1746"
+          }
+        },
+        {
+          "client_id": "703576979543-tojkcpj7u20rlvnigekpnmg6b027bhvl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZavIXN9j3AR5pBmlFcBnuv5RnlVpGbno"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "703576979543-tojkcpj7u20rlvnigekpnmg6b027bhvl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "703576979543-hmdqd4s2ppamfi7ke6t4urb56nrmvg37.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.hostelComplaints"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
