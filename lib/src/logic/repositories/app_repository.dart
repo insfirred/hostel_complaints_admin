@@ -36,14 +36,17 @@ class AppRepository extends StateNotifier<AppState> {
       await Future.delayed(spalshScreenDuration);
       _subscription = firebaseAuth.authStateChanges().listen(
         (user) async {
-          setAppStatus(AppStatus.authenticated);
-          // bypassing the auth flow....
-
-          // if (user == null) {
-          //   setAppStatus(AppStatus.unauthenticated);
-          // } else {
-          //   setAppStatus(AppStatus.authenticated);
-          // }
+          if (user == null) {
+            state = state.copyWith(
+              appStatus: AppStatus.unauthenticated,
+            );
+          } else {
+            // save user auth data in state and set status to authenticated
+            state = state.copyWith(
+              authUser: user,
+              appStatus: AppStatus.authenticated,
+            );
+          }
         },
       );
     }();
@@ -58,7 +61,6 @@ class AppRepository extends StateNotifier<AppState> {
 class AppState with _$AppState {
   const factory AppState({
     @Default(null) User? authUser,
-    @Default(false) bool userDataExists,
     @Default(AppStatus.initial) AppStatus? appStatus,
   }) = _AppState;
 }

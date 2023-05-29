@@ -17,7 +17,6 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$AppState {
   User? get authUser => throw _privateConstructorUsedError;
-  bool get userDataExists => throw _privateConstructorUsedError;
   AppStatus? get appStatus => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -30,7 +29,7 @@ abstract class $AppStateCopyWith<$Res> {
   factory $AppStateCopyWith(AppState value, $Res Function(AppState) then) =
       _$AppStateCopyWithImpl<$Res, AppState>;
   @useResult
-  $Res call({User? authUser, bool userDataExists, AppStatus? appStatus});
+  $Res call({User? authUser, AppStatus? appStatus});
 }
 
 /// @nodoc
@@ -47,7 +46,6 @@ class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
   @override
   $Res call({
     Object? authUser = freezed,
-    Object? userDataExists = null,
     Object? appStatus = freezed,
   }) {
     return _then(_value.copyWith(
@@ -55,10 +53,6 @@ class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
           ? _value.authUser
           : authUser // ignore: cast_nullable_to_non_nullable
               as User?,
-      userDataExists: null == userDataExists
-          ? _value.userDataExists
-          : userDataExists // ignore: cast_nullable_to_non_nullable
-              as bool,
       appStatus: freezed == appStatus
           ? _value.appStatus
           : appStatus // ignore: cast_nullable_to_non_nullable
@@ -74,7 +68,7 @@ abstract class _$$_AppStateCopyWith<$Res> implements $AppStateCopyWith<$Res> {
       __$$_AppStateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({User? authUser, bool userDataExists, AppStatus? appStatus});
+  $Res call({User? authUser, AppStatus? appStatus});
 }
 
 /// @nodoc
@@ -89,7 +83,6 @@ class __$$_AppStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? authUser = freezed,
-    Object? userDataExists = null,
     Object? appStatus = freezed,
   }) {
     return _then(_$_AppState(
@@ -97,10 +90,6 @@ class __$$_AppStateCopyWithImpl<$Res>
           ? _value.authUser
           : authUser // ignore: cast_nullable_to_non_nullable
               as User?,
-      userDataExists: null == userDataExists
-          ? _value.userDataExists
-          : userDataExists // ignore: cast_nullable_to_non_nullable
-              as bool,
       appStatus: freezed == appStatus
           ? _value.appStatus
           : appStatus // ignore: cast_nullable_to_non_nullable
@@ -112,24 +101,18 @@ class __$$_AppStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_AppState with DiagnosticableTreeMixin implements _AppState {
-  const _$_AppState(
-      {this.authUser = null,
-      this.userDataExists = false,
-      this.appStatus = AppStatus.initial});
+  const _$_AppState({this.authUser = null, this.appStatus = AppStatus.initial});
 
   @override
   @JsonKey()
   final User? authUser;
   @override
   @JsonKey()
-  final bool userDataExists;
-  @override
-  @JsonKey()
   final AppStatus? appStatus;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'AppState(authUser: $authUser, userDataExists: $userDataExists, appStatus: $appStatus)';
+    return 'AppState(authUser: $authUser, appStatus: $appStatus)';
   }
 
   @override
@@ -138,7 +121,6 @@ class _$_AppState with DiagnosticableTreeMixin implements _AppState {
     properties
       ..add(DiagnosticsProperty('type', 'AppState'))
       ..add(DiagnosticsProperty('authUser', authUser))
-      ..add(DiagnosticsProperty('userDataExists', userDataExists))
       ..add(DiagnosticsProperty('appStatus', appStatus));
   }
 
@@ -149,15 +131,12 @@ class _$_AppState with DiagnosticableTreeMixin implements _AppState {
             other is _$_AppState &&
             (identical(other.authUser, authUser) ||
                 other.authUser == authUser) &&
-            (identical(other.userDataExists, userDataExists) ||
-                other.userDataExists == userDataExists) &&
             (identical(other.appStatus, appStatus) ||
                 other.appStatus == appStatus));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, authUser, userDataExists, appStatus);
+  int get hashCode => Object.hash(runtimeType, authUser, appStatus);
 
   @JsonKey(ignore: true)
   @override
@@ -167,15 +146,11 @@ class _$_AppState with DiagnosticableTreeMixin implements _AppState {
 }
 
 abstract class _AppState implements AppState {
-  const factory _AppState(
-      {final User? authUser,
-      final bool userDataExists,
-      final AppStatus? appStatus}) = _$_AppState;
+  const factory _AppState({final User? authUser, final AppStatus? appStatus}) =
+      _$_AppState;
 
   @override
   User? get authUser;
-  @override
-  bool get userDataExists;
   @override
   AppStatus? get appStatus;
   @override

@@ -43,6 +43,7 @@ dependencies:
   json_serializable: ^6.6.2
   google_fonts: ^4.0.4
   auto_route: ^5.0.4
+  pinput: ^2.2.31
 
 dev_dependencies:
   flutter_test:
