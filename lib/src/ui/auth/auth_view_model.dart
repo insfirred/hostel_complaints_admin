@@ -47,7 +47,7 @@ class AuthViewModel extends StateNotifier<AuthViewState> {
   /// validates the phone number
   /// makes an API call and check if this user exists or not
   /// and requests OTP using Firebase Auth
-  requestOtp() async {
+  requestOtpIfAdminExists() async {
     debugPrint('requestOtp() called...');
     if (state.mobile.trim().isEmpty) {
       _setError('Please enter the phone number.');
@@ -61,10 +61,13 @@ class AuthViewModel extends StateNotifier<AuthViewState> {
     // checking if admin present in databse
     if (!(await _isAdminExists())) return;
 
-    state = state.copyWith(
-      status: AuthViewStatus.processingRequestOtp,
-    );
-    _verifyPhoneNumber();
+    if (state.status != AuthViewStatus.error) {
+      print('yaha nhi aana chahiye');
+      state = state.copyWith(
+        status: AuthViewStatus.processingRequestOtp,
+      );
+      _verifyPhoneNumber();
+    }
   }
 
   /// verifies the OTP when auto-verification doesn't work
@@ -113,10 +116,12 @@ class AuthViewModel extends StateNotifier<AuthViewState> {
   }
 
   setMobile(String mobile) => state = state.copyWith(
+        status: AuthViewStatus.initial,
         mobile: mobile,
       );
 
   setOtp(String otp) => state = state.copyWith(
+        status: AuthViewStatus.initial,
         otp: otp,
       );
 
@@ -132,9 +137,6 @@ class AuthViewModel extends StateNotifier<AuthViewState> {
           );
           print('returning false...');
           return false;
-        } else {
-          debugPrint('null nhi hai, data ye hai:');
-          debugPrint('admins: ${value.data()}');
         }
       },
     );

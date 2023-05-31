@@ -109,7 +109,9 @@ class _AuthViewState extends ConsumerState<AuthView> {
                       ExtraHeight(20),
                       ElevatedButton(
                         onPressed: () {
-                          ref.read(authViewModelProvider.notifier).requestOtp();
+                          ref
+                              .read(authViewModelProvider.notifier)
+                              .requestOtpIfAdminExists();
                         },
                         child: Text(
                           activeScreen == AuthScreen.login
