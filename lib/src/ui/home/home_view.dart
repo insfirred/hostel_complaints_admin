@@ -1,16 +1,18 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:hostel_complaints_admin/src/models/firestore_models/admin_data.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hostel_complaints_admin/src/utils/extra_space.dart';
 
 import 'components/complaint_card.dart';
+import 'home_view_model.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends ConsumerWidget {
   const HomeView({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final status = ref.watch(
+      homeViewModelProvider.select((_) => _.status),
+    );
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -20,12 +22,12 @@ class HomeView extends StatelessWidget {
               ExtraHeight(25),
               const ComplaintCard(),
               ExtraHeight(25),
-              ElevatedButton(
-                onPressed: () {
-                  FirebaseAuth.instance.signOut();
-                },
-                child: const Text('sign out'),
-              ),
+              // ElevatedButton(
+              //   onPressed: () {
+              //     FirebaseAuth.instance.signOut();
+              //   },
+              //   child: const Text('sign out'),
+              // ),
             ],
           ),
         ),

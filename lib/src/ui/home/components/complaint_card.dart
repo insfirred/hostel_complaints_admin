@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hostel_complaints_admin/src/utils/extra_space.dart';
 
 class ComplaintCard extends StatelessWidget {
   const ComplaintCard({

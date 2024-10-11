@@ -1,7 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../utils/date_timestamp.dart';
-
 part 'admin_data.g.dart';
 
 @JsonSerializable()
